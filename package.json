@@ -4,7 +4,10 @@
   "description": "Extension for CPH to directly submit code from VSCode to Chrome",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "webpack-dev": "webpack --mode=development --watch",
+    "webpack": "webpack --mode=production",
+    "tsc": "tsc",
+    "tsc-dev": "tsc --watch"
   },
   "author": "Balveer Singh Rao",
   "keywords": [

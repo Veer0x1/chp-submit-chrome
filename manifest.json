@@ -1,0 +1,19 @@
+{
+    "name": "CPH submit chrome extension",
+    "manifest_version": 2,
+    "version": "1.0.0",
+    "description": "Chrome extension for directly submitting code to Chrome",
+    "icons": {
+        "48": "icon-48.png"
+    },
+    "background": {
+        "scripts": [
+            "dist/backgroundScript.js"
+        ]
+    },
+    "permissions": [
+        "*://localhost/*",
+        "*://codeforces.com/*",
+        "webNavigation"
+    ]
+}

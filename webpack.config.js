@@ -2,24 +2,23 @@ const path = require("path");
 
 module.exports = {
   entry: {
-    bgScript: "./src/bgScript.js",
-    injectedScript: "./src/injectedScript.js",
+    backgroundScript: "./src/backgroundScript.ts",
+    injectedScript: "./src/injectedScript.ts",
   },
   output: {
-    path: path.resolve(__dirname, "dist"),
     filename: "[name].js",
+    path: path.resolve(__dirname, "dist"),
   },
   module: {
     rules: [
       {
-        test: /\.tsx$/,
-        use: "ts-loader",
-        exclude: /node_modules/,
+        test: /\.tsx?$/,
+        loader: "ts-loader",
       },
     ],
   },
   resolve: {
-    extensions: [".tsx", ".ts", ".js"],
+    extensions: [".ts", ".tsx", ".js"],
   },
-  devtool: "inline-source-map",
+  devtool: 'inline-source-map'
 };
